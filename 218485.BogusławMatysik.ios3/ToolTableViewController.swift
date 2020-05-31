@@ -90,6 +90,14 @@ class ToolTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    //MARK: Actions
+    @IBAction func unwindToToolList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ToolViewController, let tool = sourceViewController.tool{
+            let newIndexPath = IndexPath(row: tools.count, section: 0)
+            tools.append(tool)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
     
     //MARK: Privete Methods
     private func loadSampleTools(){

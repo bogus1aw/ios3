@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tool View Controller-->
+        <!--New Tool-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ToolViewController" customModule="_18485_BogusławMatysik_ios3" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,15 +29,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dR8-jj-Qh3"/>
+                    <navigationItem key="navigationItem" title="New Tool" id="dR8-jj-Qh3">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="g3a-DI-iZC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nR0-cL-pb9">
+                            <connections>
+                                <segue destination="QMI-8h-RZ5" kind="unwind" unwindAction="unwindToToolListWithSender:" id="93a-ei-3RH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="Mv2-c7-USJ" id="EKF-qA-f2J"/>
                         <outlet property="photoImageView" destination="agR-ss-QPh" id="o4T-ho-NWr"/>
+                        <outlet property="saveButton" destination="nR0-cL-pb9" id="3Jm-mp-Tc6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="QMI-8h-RZ5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="138"/>
+            <point key="canvasLocation" x="2660.8695652173915" y="137.94642857142856"/>
         </scene>
         <!--Your Tools-->
         <scene sceneID="Ad4-0V-m8W">
@@ -83,7 +92,7 @@
                     <navigationItem key="navigationItem" title="Your Tools" id="wBc-1w-GIb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l3h-wT-upv">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="AddItem" id="SPd-eR-4N1"/>
+                                <segue destination="dmz-XS-v5x" kind="presentation" identifier="AddItem" id="SPd-eR-4N1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,6 +118,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RrI-Yi-1Gc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uRW-jB-LsJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dmz-XS-v5x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3D9-iA-5Sw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h0R-CY-cwt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykh-ZP-XLw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750.7246376811595" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
