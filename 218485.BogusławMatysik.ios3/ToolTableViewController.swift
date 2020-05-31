@@ -22,24 +22,29 @@ class ToolTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tools.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let cellIdentifier = "ToolTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ToolTableViewCell else {
+            fatalError("The dequeued cell is not an instance of ToolTableViewCell.")
+        }
+        
+        let tool = tools[indexPath.row]
 
-        // Configure the cell...
+        cell.nameLabel.text = tool.name
+        cell.photoImageView.image = tool.photo
+//            = tool.rating
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
