@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jgO-Cp-XpU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KuF-Et-eSf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ToolViewController" customModule="_18485_BogusławMatysik_ios3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agR-ss-QPh">
@@ -29,6 +29,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dR8-jj-Qh3"/>
                     <connections>
                         <outlet property="nameTextField" destination="Mv2-c7-USJ" id="EKF-qA-f2J"/>
                         <outlet property="photoImageView" destination="agR-ss-QPh" id="o4T-ho-NWr"/>
@@ -36,9 +37,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779.71014492753625" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1751" y="138"/>
         </scene>
-        <!--Tool Table View Controller-->
+        <!--Your Tools-->
         <scene sceneID="Ad4-0V-m8W">
             <objects>
                 <tableViewController id="jgO-Cp-XpU" customClass="ToolTableViewController" customModule="_18485_BogusławMatysik_ios3" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +55,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0z6-9t-lHS">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0z6-9t-lHS">
                                             <rect key="frame" x="0.0" y="0.0" width="143" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -79,13 +80,35 @@
                             <outlet property="delegate" destination="jgO-Cp-XpU" id="diq-sN-vwr"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Tools" id="wBc-1w-GIb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="l3h-wT-upv">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="AddItem" id="SPd-eR-4N1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm8-oy-UMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.0869565217392" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jrw-42-JMV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KuF-Et-eSf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s06-4F-gTJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jgO-Cp-XpU" kind="relationship" relationship="rootViewController" id="J5P-fP-gkB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RrI-Yi-1Gc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="137.94642857142856"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="doc" catalog="system" width="115" height="128"/>
-    </resources>
 </document>
