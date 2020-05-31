@@ -17,6 +17,7 @@
 		AA5F7C9524830EFE0010DA7A /* _18485_Bogus_awMatysik_ios3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F7C9424830EFE0010DA7A /* _18485_Bogus_awMatysik_ios3UITests.swift */; };
 		AA5F7CA32483164A0010DA7A /* ToolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F7CA22483164A0010DA7A /* ToolTableViewCell.swift */; };
 		AA5F7CA52483A70B0010DA7A /* ToolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F7CA42483A70B0010DA7A /* ToolTableViewController.swift */; };
+		AA5F7CB12483D05B0010DA7A /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F7CB02483D05B0010DA7A /* Tool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AA5F7C9624830EFE0010DA7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5F7CA22483164A0010DA7A /* ToolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTableViewCell.swift; sourceTree = "<group>"; };
 		AA5F7CA42483A70B0010DA7A /* ToolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTableViewController.swift; sourceTree = "<group>"; };
+		AA5F7CB02483D05B0010DA7A /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		AA5F7C6624830EFC0010DA7A = {
 			isa = PBXGroup;
 			children = (
+				AA5F7CB02483D05B0010DA7A /* Tool.swift */,
 				AA5F7C7124830EFC0010DA7A /* 218485.BogusławMatysik.ios3 */,
 				AA5F7C8824830EFE0010DA7A /* 218485.BogusławMatysik.ios3Tests */,
 				AA5F7C9324830EFE0010DA7A /* 218485.BogusławMatysik.ios3UITests */,
@@ -268,6 +271,7 @@
 				AA5F7C7724830EFC0010DA7A /* ViewController.swift in Sources */,
 				AA5F7C7324830EFC0010DA7A /* AppDelegate.swift in Sources */,
 				AA5F7C7524830EFC0010DA7A /* SceneDelegate.swift in Sources */,
+				AA5F7CB12483D05B0010DA7A /* Tool.swift in Sources */,
 				AA5F7CA52483A70B0010DA7A /* ToolTableViewController.swift in Sources */,
 				AA5F7CA32483164A0010DA7A /* ToolTableViewCell.swift in Sources */,
 			);

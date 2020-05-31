@@ -9,15 +9,14 @@
 import UIKit
 
 class ToolTableViewController: UITableViewController {
+    
+    var tools = [Tool]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadSampleTools()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -86,5 +85,26 @@ class ToolTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: Privete Methods
+    private func loadSampleTools(){
+        
+        let photo1 = UIImage(named: "tool1")
+        let photo2 = UIImage(named: "tool2")
+        let photo3 = UIImage(named: "tool3")
+        
+        guard let tool1 = Tool(name: "Electric Wheelbarrow", photo: photo1, rating: 5) else {
+            fatalError("Unable to instantiate tool1")
+        }
+        guard let tool2 = Tool(name: "Wheelbarrow", photo: photo2, rating: 4) else {
+            fatalError("Unable to instantiate tool2")
+        }
+        guard let tool3 = Tool(name: "Screwdriver", photo: photo3, rating: 2) else {
+            fatalError("Unable to instantiate tool3")
+        }
 
+        tools += [tool1, tool2, tool3]
+        
+        
+    }
 }
