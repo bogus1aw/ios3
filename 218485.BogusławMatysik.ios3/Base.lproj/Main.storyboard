@@ -30,7 +30,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Tool" id="dR8-jj-Qh3">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="g3a-DI-iZC"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="g3a-DI-iZC">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="cro-he-3kb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="nR0-cL-pb9">
                             <connections>
                                 <segue destination="QMI-8h-RZ5" kind="unwind" unwindAction="unwindToToolListWithSender:" id="93a-ei-3RH"/>
