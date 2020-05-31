@@ -24,9 +24,14 @@ class ToolViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
+        
+        updateSaveButtonState()
     }
     
     //MARK: UITextFieldDelegate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
@@ -35,6 +40,8 @@ class ToolViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+        navigationItem.title = textField.text
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -86,6 +93,12 @@ class ToolViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    //MARK: Private Methods
+    private func updateSaveButtonState(){
+        let text  = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
     }
 
 }
